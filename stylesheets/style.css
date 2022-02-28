@@ -1,0 +1,12 @@
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+.icon-margin-right {
+  margin-right: 0.5vw;
+}
+
+.index-search-bar {
+  border-radius: 1vw;
+  margin-top: 1vw;
+}
