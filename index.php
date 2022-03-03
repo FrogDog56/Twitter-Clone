@@ -17,7 +17,6 @@
         if(str.length == 0){
             document.getElementById("output").innerHTML = "";
         } else {
-            //AJAX REQ
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function(){
                 if(this.readyState == 4 && this.status == 200){
@@ -28,6 +27,12 @@
             xmlhttp.send();
         }
     }
+
+    function showTweetPopup() {
+    	var popup = document.getElementById("tweetPopup");
+  		popup.classList.toggle("show");
+
+    }
 </script>
 
 <?php include("inc/header.php"); ?>
@@ -35,6 +40,11 @@
 	<div class="row">
 	  	<div class="col">
 	  		<?php include("inc/nav.php"); ?>
+	  		<br>
+	  		<div class="popup vertical-center">
+	  			<input type="button" name="tweet" value="Tweet" class="btn btn-primary" onclick="showTweetPopup()">
+			  	<span class="popuptext" id="tweetPopup" style="text-align: center;">Popup</span>
+			</div>
 	    </div>
 	    <div class="col">
 	    	<h1>Home</h1>
