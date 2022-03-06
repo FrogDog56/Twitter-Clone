@@ -17,7 +17,7 @@
         if(str.length == 0){
             document.getElementById("output").innerHTML = "";
         } else {
-            var xmlhttp = new XMLHttpRequest();
+            let xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function(){
                 if(this.readyState == 4 && this.status == 200){
                     document.getElementById('output').innerHTML = this.responseText;
@@ -29,7 +29,9 @@
     }
 
     function showTweetPopup() {
-    	var popup = document.getElementById("tweetPopup");
+    	let popup = document.getElementById("tweetPopup");
+    	let body = document.getElementById("body");
+    	body.classList.toggle("darken");
   		popup.classList.toggle("show");
 
     }
@@ -43,11 +45,19 @@
 	  		<br>
 	  		<div class="popup vertical-center">
 	  			<input type="button" name="tweet" value="Tweet" class="btn btn-primary" onclick="showTweetPopup()">
-			  	<span class="popuptext" id="tweetPopup" style="text-align: center;">Popup</span>
+				  	<div class="popuptext" id="tweetPopup">
+				  		<form><i class="bi bi-x"></i></form>
+				  	</div>
 			</div>
 	    </div>
 	    <div class="col">
 	    	<h1>Home</h1>
+	    	<div>
+	    		<form>
+	    			<i class="bi bi-person-circle text-dark fs-2"></i>
+	    			<input type="text" placeholder="What's happening?">
+	    		</form>
+	    	</div>
 	    	<div class="overflow-auto">
 	    		<?php foreach ($posts as $post): ?>
 	    			<div class="">
