@@ -1,3 +1,1 @@
-#password
-config
-  secrets.php
+secrets.php
