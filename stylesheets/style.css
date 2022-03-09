@@ -2,9 +2,22 @@
   cursor: pointer;
 }
 
+/* tags */
+
 a:-webkit-any-link {
   text-decoration: none;
+  border-radius: 2.5vw;
 }
+
+a:hover {
+  background-color: #dfdfdf;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+/* classes */
 
 .icon-margin-right {
   margin-right: 0.5vw;
@@ -50,8 +63,47 @@ a:-webkit-any-link {
   top: 50%;
   transform: translate(50%, -50%); /* weird spaghetti centering if you know a better way to do this submit a pr */
   -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
+  animation: fadeIn 1s;
 }
+
+.darken {
+  opacity: 75%;
+}
+
+.noBorder {
+  border-width: 0px;
+}
+
+.flex-container {
+  flex: 1;
+}
+
+/* ids */
+
+#tweetBtn {
+  border-width: 0px;
+  border-radius: 2.5vw;
+  border-style: solid;
+  width: 12vw;
+  height: 5.5vh;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+#searchBox {
+  border-width: 0px;
+  border-radius: 2.5vw;
+  border-style: solid;
+  background-color: #dfdfdf;
+}
+
+#searchTextBox {
+  border-style: none;
+  border-width: 0px;
+  background-color: #dfdfdf;
+}
+
+/* animations */
 
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
@@ -61,8 +113,4 @@ a:-webkit-any-link {
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
-}
-
-.darken {
-  opacity: 75%;
 }

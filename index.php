@@ -28,34 +28,26 @@
         }
     }
 
-    function showTweetPopup() {
-    	let popup = document.getElementById("tweetPopup");
-    	let body = document.getElementById("body");
-    	body.classList.toggle("darken");
-  		popup.classList.toggle("show");
-
-    }
 </script>
 
 <?php include("inc/header.php"); ?>
 <div class="container">
 	<div class="row">
-	  	<div class="col">
-	  		<?php include("inc/nav.php"); ?>
-	  		<br>
-	  		<div class="popup vertical-center">
-	  			<input type="button" name="tweet" value="Tweet" class="btn btn-primary" onclick="showTweetPopup()">
-				  	<div class="popuptext" id="tweetPopup">
-				  		<form><i class="bi bi-x"></i></form>
-				  	</div>
-			</div>
+	  	<div class="col-3">
+	  		<div>
+		  		<?php include("inc/nav.php"); ?>
+	  		</div>
 	    </div>
-	    <div class="col">
-	    	<h1>Home</h1>
+	    <div class="col-6 border-top-0 border border-dark">
+	    	<h4>Home</h4>
+	    	<br>
 	    	<div>
 	    		<form>
-	    			<i class="bi bi-person-circle text-dark fs-2"></i>
-	    			<input type="text" placeholder="What's happening?">
+	    			<i class="bi bi-person-circle text-secondary fs-1"></i>
+	    				<span class="ms-2">
+	    					<input class="noBorder fs-5" type="text" placeholder="What's happening?">
+	    					<i class="bi bi-globe2"></i>
+	    				</span>
 	    		</form>
 	    	</div>
 	    	<div class="overflow-auto">
@@ -68,13 +60,16 @@
 	    		<?php endforeach ?>
 	    	</div>
 	    </div>
-	    <div class="col">
+	    <div class="col-3">
 	    	<form class="index-search-bar">
-            	<input type="text" class="form-control" onkeyup="showSuggestion(this.value)" placeholder="Search Twitter">
+	    		<div id="searchBox" class="form-control">
+	    			<i class="bi bi-search"></i>
+	    			<input id="searchTextBox" type="text" onkeyup="showSuggestion(this.value)" placeholder="Search Twitter">
+	    		</div>
+	        	<p>
+	        		<span id=output style="font-weight:bold"></span>
+	        	</p>
         	</form>
-        	<p>Suggestions: 
-        		<span id=output style="font-weight:bold"></span>
-        	</p>
 	    </div>
     </div>
 </div>
