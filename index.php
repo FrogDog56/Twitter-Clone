@@ -27,7 +27,6 @@
             xmlhttp.send();
         }
     }
-
 </script>
 
 <?php include("inc/header.php"); ?>
@@ -43,11 +42,17 @@
 	    	<br>
 	    	<div>
 	    		<form>
-	    			<i class="bi bi-person-circle text-secondary fs-1"></i>
-	    				<span class="ms-2">
+	    			<div class="flex-container">
+	    				<div class="flex-item-left">
+	    					<i class="bi bi-person-circle text-secondary fs-1"></i>
+	    				</div>
+	    				<div class="flex-item-right">
 	    					<input class="noBorder fs-5" type="text" placeholder="What's happening?">
+	    					<br>
 	    					<i class="bi bi-globe2"></i>
-	    				</span>
+	    					<hr>
+	    				</div>
+	    			</div>
 	    		</form>
 	    	</div>
 	    	<div class="overflow-auto">

@@ -75,7 +75,15 @@ input:focus, textarea:focus, select:focus {
 }
 
 .flex-container {
-  flex: 1;
+  display: flex;
+}
+
+.flex-item-left {
+  flex: 10%;
+}
+
+.flex-item-right {
+  flex: 90%;
 }
 
 /* ids */
