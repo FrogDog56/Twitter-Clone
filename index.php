@@ -46,25 +46,33 @@
 	    				<div class="flex-item-left">
 	    					<i class="bi bi-person-circle text-secondary fs-1"></i>
 	    				</div>
-	    				<div class="flex-item-right">
-	    					<input class="noBorder fs-5" type="text" placeholder="What's happening?">
+	    				<div class="flex-item-right top">
+	    					<input class="noBorder fs-5" type="text" placeholder="What's happening?" onclick="showButton()">
 	    					<br>
-	    					<i class="bi bi-globe2"></i>
-	    					<hr>
+	    					<span id="everyoneBtn" class="button">
+	    						<br>
+	    							<a href="#" class="text-info">
+	    								<i class="bi bi-globe2">
+	    									<strong>Everyone can reply</strong>
+	    								</i>
+	    							</a>
+		    					<hr>
+		    				</span>
 	    				</div>
 	    			</div>
 	    		</form>
 	    	</div>
 	    	<div class="overflow-auto">
 	    		<?php foreach ($posts as $post): ?>
-	    			<div class="">
-	    				<h3><?php echo $post["author"]; ?></h3>
-	    				<small><?php echo $post["created"]; ?></small>
-	    				<p><?php echo $post["body"]; ?></p>
+	    			<div>
+	    				<hr>
+		    				<h3><?php echo $post["author"]; ?></h3>
+		    				<small><?php echo $post["created"]; ?></small>
+		    				<p><?php echo $post["body"]; ?></p>
 	    			</div>
 	    		<?php endforeach ?>
 	    	</div>
-	    </div>
+		</div>
 	    <div class="col-3">
 	    	<form class="index-search-bar">
 	    		<div id="searchBox" class="form-control">

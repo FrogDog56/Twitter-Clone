@@ -1,12 +1,3 @@
-<script>
-	function showTweetPopup() {
-    	let popup = document.getElementById("tweetPopup");
-    	let body = document.getElementById("body");
-    	body.classList.toggle("darken");
-  		popup.classList.toggle("show");
-    }
-</script>
-
 <form>
 	<a href="#" class="text-dark fs-5 btn"><i class="bi bi-twitter text-info fa-2x"></i></a>
 	<br>

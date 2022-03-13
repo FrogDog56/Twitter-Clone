@@ -26,7 +26,6 @@ $people[] = "Mary";
 $people[] = "Brad";
 $people[] = "Mike";
 
-// Get Query String
 $q = $_REQUEST["q"];
 
 $suggestion = "";

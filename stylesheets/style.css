@@ -19,6 +19,27 @@ input:focus, textarea:focus, select:focus {
 
 /* classes */
 
+.top {
+  position: inherit;
+}
+
+.top .button {
+  visibility: hidden;
+  position: inherit;
+  height: 0;
+}
+
+.top .button::after {
+  content: "";
+  position: inherit;
+}
+
+.top .show {
+  visibility: visible;
+  position: inherit;
+  height: inherit;
+}
+
 .icon-margin-right {
   margin-right: 0.5vw;
 }
